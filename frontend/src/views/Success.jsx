@@ -9,10 +9,6 @@ const Success = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    <div>
-    <h1>Success!</h1>
-    <p>Your operation completed successfully.</p>
-  </div>
     // You can add any additional logic here
     // For example, if you want to automatically redirect after a certain time
     setTimeout(() => {
