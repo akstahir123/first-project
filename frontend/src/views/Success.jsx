@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Box, Container, Typography, Button } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
-
+import Success from '../components/Success';
 
 const Success = () => {
   const navigate = useNavigate();
