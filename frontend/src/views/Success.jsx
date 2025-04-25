@@ -14,8 +14,7 @@ const Success = () => {
     setTimeout(() => {
       navigate('/');
     }, 5000); // Redirect after 5 seconds
-     return () => clearTimeout(timer);
-  }, [navigate]);
+  }, []);
 
   return (
     <Box
