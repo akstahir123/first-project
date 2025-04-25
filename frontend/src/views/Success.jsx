@@ -1,13 +1,19 @@
-import SuccessView from '../views/Success'; // Rename import if needed
+import React, { useEffect } from 'react';
+import { Box, Container, Typography, Button } from '@mui/material';
+import { Link, useNavigate } from 'react-router-dom';
 
-const SuccessComponent = () => {
+const Success = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    setTimeout(() => {
+    // Redirect to the home page after 5 seconds
+    const timer = setTimeout(() => {
       navigate('/');
     }, 5000);
-  }, [navigate]); // Add `navigate` to dependency array for clarity
+
+    // Clean up the timer when the component unmounts
+    return () => clearTimeout(timer);
+  }, [navigate]);
 
   return (
     <Box
@@ -32,4 +38,4 @@ const SuccessComponent = () => {
   );
 };
 
-export default SuccessComponent;
+export default Success;
