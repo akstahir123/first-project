@@ -1,20 +1,13 @@
-import React, { useEffect } from 'react';
-import { Box, Container, Typography, Button } from '@mui/material';
-import { Link, useNavigate } from 'react-router-dom';
-import Success from '../views/Success';
+import SuccessView from '../views/Success'; // Rename import if needed
 
-
-const Success = () => {
+const SuccessComponent = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-
-    // You can add any additional logic here
-    // For example, if you want to automatically redirect after a certain time
     setTimeout(() => {
       navigate('/');
-    }, 5000); // Redirect after 5 seconds
-  }, []);
+    }, 5000);
+  }, [navigate]); // Add `navigate` to dependency array for clarity
 
   return (
     <Box
@@ -39,4 +32,4 @@ const Success = () => {
   );
 };
 
-export default Success;
+export default SuccessComponent;
