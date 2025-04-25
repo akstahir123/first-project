@@ -1,19 +1,20 @@
 import React, { useEffect } from 'react';
 import { Box, Container, Typography, Button } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
+import Success from '../components/Success';
+
 
 const Success = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Redirect to the home page after 5 seconds
-    const timer = setTimeout(() => {
-      navigate('/');
-    }, 5000);
 
-    // Clean up the timer when the component unmounts
-    return () => clearTimeout(timer);
-  }, [navigate]);
+    // You can add any additional logic here
+    // For example, if you want to automatically redirect after a certain time
+    setTimeout(() => {
+      navigate('/');
+    }, 5000); // Redirect after 5 seconds
+  }, []);
 
   return (
     <Box
