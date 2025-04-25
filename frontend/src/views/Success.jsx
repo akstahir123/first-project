@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import { Box, Container, Typography, Button } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
-// ⛔️ Don't name this import the same as your component
-import SuccessComponent from '../components/Success'; 
 
 const Success = () => {
   const navigate = useNavigate();
