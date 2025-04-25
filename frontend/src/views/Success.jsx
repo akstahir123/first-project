@@ -1,18 +1,17 @@
 import React, { useEffect } from 'react';
 import { Box, Container, Typography, Button } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
-import Success from '../components/Success';
+// ⛔️ Don't name this import the same as your component
+import SuccessComponent from '../components/Success'; 
 
 const Success = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // You can add any additional logic here
-    // For example, if you want to automatically redirect after a certain time
     setTimeout(() => {
       navigate('/');
-    }, 5000); // Redirect after 5 seconds
-  }, []);
+    }, 5000);
+  }, [navigate]);
 
   return (
     <Box
